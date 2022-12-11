@@ -1,9 +1,14 @@
-import { Map, MapMarker, MarkerClusterer } from "react-kakao-maps-sdk";
+import { useState } from "react";
+import SearchMap from "./SearchMap";
 
 const Aed = () => {
+    const [query, setQuery] = useState('제세동기');
+    
     return (
-        <p>Aed 테스트</p>
-    )
+        <div>
+            <SearchMap query={query} setQuery={setQuery} type="제세동기"/>
+        </div>
+    );
 }
 
 export default Aed;
