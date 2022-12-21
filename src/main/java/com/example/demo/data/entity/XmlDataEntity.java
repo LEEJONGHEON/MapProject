@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 @Setter @Getter @ToString
 @AllArgsConstructor
-public class DataEntity {
+public class XmlDataEntity {
     /*
     데이터구조
     연번:854
@@ -32,7 +32,7 @@ public class DataEntity {
     private String kuYeokKuBun;
     private String jangSo;
 
-    public DataEntity(ArrayList<String> list) {
+    public XmlDataEntity(ArrayList<String> list) {
         this.id = Integer.parseInt(list.get(0));
         this.siDo = list.get(1);
         this.siKunKu = list.get(2);

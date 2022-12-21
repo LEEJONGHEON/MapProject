@@ -1,14 +1,12 @@
 package com.example.demo.data;
 
-import com.example.demo.data.service.DataService;
 import com.example.demo.data.service.ExcelDataService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class DataServiceTest {
+public class XmlDataServiceTest {
 
     ExcelDataService excelDataService;
 

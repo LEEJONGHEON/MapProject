@@ -1,9 +1,7 @@
 package com.example.demo.data.api;
 
-import com.example.demo.data.entity.DataEntity;
-import com.example.demo.data.service.DataService;
-import com.example.demo.data.entity.ExcelDataEntity;
-import com.example.demo.data.service.ExcelDataService;
+import com.example.demo.data.entity.XmlDataEntity;
+import com.example.demo.data.service.XmlDataService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -16,7 +14,6 @@ import org.w3c.dom.*;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -26,13 +23,13 @@ import org.xml.sax.SAXException;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/data")
+@RequestMapping("/xml")
 @Slf4j
 @CrossOrigin
-public class DataController {
+public class XmlDataController {
 
-    private final DataService dataService;
-    private final ExcelDataService excelDataService;
+    private final XmlDataService xmlDataService;
+
 
     @GetMapping
     public void getData() throws Exception {
@@ -47,8 +44,8 @@ public class DataController {
         }
     }
 
-    @GetMapping("/processing")
-    public void processing() throws ParserConfigurationException, IOException, SAXException {
+    @GetMapping("/db")
+    public void xmlToDB() throws ParserConfigurationException, IOException, SAXException {
         // xml 읽어와서 원하는 데이터만 따로출력
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -58,13 +55,9 @@ public class DataController {
         for (int index=0; index < nodeList.getLength(); index++) {
             Node node = nodeList.item(index);
             Element element = (Element) node;
-            DataEntity dataEntity = dataService.parseAllData(element);
-            System.out.println(dataEntity);
+            XmlDataEntity xmlDataEntity = xmlDataService.parseAllData(element);
         }
     }
 
-    @GetMapping("/excel")
-    public void loadExcel() {
-        ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.readData();
-    }
+
 }
