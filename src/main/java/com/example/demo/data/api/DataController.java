@@ -2,6 +2,8 @@ package com.example.demo.data.api;
 
 import com.example.demo.data.entity.DataEntity;
 import com.example.demo.data.service.DataService;
+import com.example.demo.data.entity.ExcelDataEntity;
+import com.example.demo.data.service.ExcelDataService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -15,8 +17,6 @@ import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -32,6 +32,7 @@ import org.xml.sax.SAXException;
 public class DataController {
 
     private final DataService dataService;
+    private final ExcelDataService excelDataService;
 
     @GetMapping
     public void getData() throws Exception {
@@ -60,5 +61,10 @@ public class DataController {
             DataEntity dataEntity = dataService.parseAllData(element);
             System.out.println(dataEntity);
         }
+    }
+
+    @GetMapping("/excel")
+    public void loadExcel() {
+        ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.readData();
     }
 }
