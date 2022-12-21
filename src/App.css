@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ol, ul {
+  list-style: none;
+  margin:0px; padding:0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  /* background:#000; */
+  display: flex;
+  height: 80px;
+  align-items: center;
+  color: #000;
+  font-weight: 700;
+  /* background: #888; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header .logo {
+  /* background: tomato; */
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+}
+header .logo img {
+  height: 50px;
+}
+header .intro-text {
+  /* background: greenyellow; */
+  margin-left: 100px;
+  justify-content: center;
+}
+
+
+
+#root{
+  /* background: red; */
+  margin-top: 20px;
+  margin: auto;
+}
+
+/* body .navbar-expand-lg {
+
+} */
+
+/* #map {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 100px auto;
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+} */
+body {
+  display: block;
+}
+
+body .nav {
+  /* background-color: aqua; */
+  max-height: 100px;
+}
+
+body #map {
+  width: 300px;
+  
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20% auto 100px;
+
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+  border-style: solid;
+  border-width: 4px;
+  border-color: #888;
+
+ 
+
+}
+
+/* 홈화면, 이미지는 변경가능, 이미지 액박시 grey */
+.item-bg{
+  width: 100%;
+  height: 700px;
+  /* background: #888;  */
+  /* url(../img/main2.png) no-repeat center/cover; */
+  position: fixed;
+  z-index: -1000;
+  width: 100%;  
+}
+
+
+
+div .d-flex{
+  justify-content: center;
+  z-index: -1000;
+  width: 100%;  
+ 
+}
+.Form.d-flex {
+
+display: inline-block;
+/* display: flex; */
+justify-content: center;
+align-items: center;
+
+
+
+}
+
+.d-flex .me-2 {
+  width: 500px;
+  height: 50px;
+  border-radius: 80px;
+}
+.d-flex Button {
+  background: #fff;
+}
+
+
+.main-icon ul li {
+  float: left;
+  width: 16.5%;
+  padding: 0;
+  
+}
+
+.main-icon ul li a {
+  padding-top: 100px;
+}
+
+.main-icon-ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+
+}
+.main-icon {
+margin-right: 30px;
+
+}
+
+.main-icon span{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
+  
+}
+ 
+
+.Map-search {
+  margin-right: 100px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: ;
+}
+/*  */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.coontaiiner{
+  max-width: 720px;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* .main-container{
+ 
+} */
+
+ .maincontainer {
+  display: flex;
+  margin-left: 100px;
+ }
+
+
+.blog-footer {
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+ 
+ }
+
+ .containerImage{
+
+  z-index: -1000;
+
+ }
+
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+
+ }

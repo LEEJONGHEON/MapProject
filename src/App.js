@@ -11,6 +11,10 @@ import Emergency from './Component/Emergency';
 import Rescue from './Component/Rescue';
 import MapPicture from './Component/MapPicture';
 import MainPage from './Component/MainPage';
+import Board from './Component/Board';
+import Header from './Component/Header';
+import Footer from './Component/Footer';
+
 
 const {kakao} = window;
 const  clusterPositionsData = {
@@ -563,6 +567,8 @@ function App() {
 
     return (
         <div>
+            <Header />
+        <div>
             <Navigation/>
             <BrowserRouter>
                 <Routes>
@@ -572,8 +578,12 @@ function App() {
                     <Route path="/Emergency" element={<Emergency />} />
                     <Route path="/Rescue" element={<Rescue />} />
                     <Route path="/MapPicture" element={<MapPicture />} />
+                    <Route path="/Board" element={<Board />} />
                 </Routes>
             </BrowserRouter>
+        </div>
+
+        <Footer />
         </div>
     );
 }

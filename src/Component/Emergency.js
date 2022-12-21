@@ -5,7 +5,7 @@ const Emergency = () => {
     
     return (
         <div>
-            <SearchMap query={query} setQuery={setQuery} type="응급실"/>
+            <SearchMap className="Map" query={query} setQuery={setQuery} type="응급실"/>
         </div>
     );
 }

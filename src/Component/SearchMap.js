@@ -59,8 +59,10 @@ const SearchMap = ({query,setQuery,type}) => {
     }
     return (
         <div>
+            <div className="Map-search">
             <p>주변 {type} 검색 </p>
             검색어(장소 입력시 주변 {type} 조회) : <input onKeyPress={Search}></input>
+            </div>
             <div id="map" style={{width:'800px', height:'800px',position:'relative', overflow:'hidden' }}></div>
         </div>
     );
