@@ -1,11 +1,10 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import {Map, MapMarker, MarkerClusterer} from "react-kakao-maps-sdk";
-import GetLocation from './component/GetLocation';
-import Navigation from './component/Navigation';
+import GetLocation from './Component/GetLocation';
+import Navigation from './Component/Navigation';
 import 'bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-<<<<<<< HEAD
 import Aed from './Component/Aed';
 import Hospital from './Component/Hospital';
 import Emergency from './Component/Emergency';
@@ -16,14 +15,6 @@ import Board from './Component/Board';
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 
-=======
-import Aed from './component/Aed';
-import Hospital from './component/Hospital';
-import Emergency from './component/Emergency';
-import Rescue from './component/Rescue';
-import MapPicture from './component/MapPicture';
-import MainPage from './component/MainPage';
->>>>>>> bc5a5ab0600dee4ccade982dd0cb5325c65bf65a
 
 const {kakao} = window;
 const  clusterPositionsData = {
