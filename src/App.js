@@ -568,7 +568,7 @@ function App() {
     return (
         <div>
             <Header />
-        <div>
+       
             <Navigation/>
             <BrowserRouter>
                 <Routes>
@@ -581,7 +581,7 @@ function App() {
                     <Route path="/Board" element={<Board />} />
                 </Routes>
             </BrowserRouter>
-        </div>
+       
 
         <Footer />
         </div>

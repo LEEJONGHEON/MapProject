@@ -19,7 +19,7 @@ const Navigation = () => {
             <Nav.Link href="Aed">자동제세동기(AED)</Nav.Link>
              
              
-            {/* 각각 영상 및 사용설명 주소 따로 */}
+            {/* 각각 영상 및 사용설명 주소 따로 작성하기 */}
             <NavDropdown title="응급처치방법" >
               <NavDropdown.Item href="Rescue">자동제세동기(AED)</NavDropdown.Item>
               <NavDropdown.Item href="Rescue">인명구조함</NavDropdown.Item>

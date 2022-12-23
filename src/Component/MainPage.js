@@ -77,8 +77,8 @@ const MainPage = () => {
                 <strong class="d-inline-block mb-2 text-primary">자동제세동기(AED)</strong>
                 <h3 class="mb-0">Post title</h3>
                 <div class="mb-1 text-muted">      </div>
-                <p class="card-text mb-auto">간단 사용법을 텍스트로 넣을지?, 링크걸기</p>
-                <a href="#" class="stretched-link">동영상 바로보기</a>
+                <p class="card-text mb-auto">간단 사용법을 텍스트로 넣을지?  어쩌구 저쩌구 텍스트글 쓰기~</p>
+                <a href="#" class="stretched-link">동영상 바로가기</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" 
@@ -93,8 +93,8 @@ const MainPage = () => {
                 <strong class="d-inline-block mb-2 text-success">인명구조함</strong>
                 <h3 class="mb-0">Post title</h3>
                 <div class="mb-1 text-muted">      </div>
-                <p class="mb-auto">동해물과 백두산이 마르고 닮도록 어쩌구 저쩌구 텍스트는 길게 쓰는게 더 나아보임</p>
-                <a href="#" class="stretched-link">동영상</a>
+                <p class="mb-auto">간단 사용법을 텍스트로 넣을지?  어쩌구 저쩌구 텍스트글 쓰기~</p>
+                <a href="#" class="stretched-link">동영상 바로가기</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">이미지2</text></svg>
@@ -107,7 +107,7 @@ const MainPage = () => {
         <div class="row g-5">
           <div class="col-md-8">
             <h3 class="pb-4 mb-4 fst-italic border-bottom">
-              From the Firehose
+              Sample Project 
             </h3>
       
             <article class="blog-post">
