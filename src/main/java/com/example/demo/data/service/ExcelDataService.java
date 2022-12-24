@@ -50,4 +50,10 @@ public class ExcelDataService {
         }
         return excelDataEntityArrayList;
     }
+
+    public ArrayList<ExcelDataEntity> searchData(String search) {
+        ArrayList<ExcelDataEntity> data =excelDataRepository.searchData(search);
+        System.out.println(data);
+        return data;
+    }
 }

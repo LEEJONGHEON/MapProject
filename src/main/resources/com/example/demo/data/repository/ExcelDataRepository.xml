@@ -11,4 +11,9 @@
         VALUES
             (#{place}, #{phoneNumber}, #{roadAddr}, #{jibyeonAddr})
     </insert>
+
+    <select id="searchData"  resultType="com.example.demo.data.entity.ExcelDataEntity">
+        SELECT * FROM excel_data
+        WHERE roadAddr LIKE CONCAT('%',#{search},'%')
+    </select>
 </mapper>

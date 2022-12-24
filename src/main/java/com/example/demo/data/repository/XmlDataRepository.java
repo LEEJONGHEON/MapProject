@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface XmlDataRepository {
 
-    //DB에 데이터 넣기
+    //XML파일 읽어서 DB에 데이터 넣기
      boolean uploadData(XmlDataEntity xmlDataEntity);
 }
