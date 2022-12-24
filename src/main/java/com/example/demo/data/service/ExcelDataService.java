@@ -32,7 +32,7 @@ public class ExcelDataService {
                 for (int rowNum =1; rowNum<9999;rowNum++) {
                     try {
                         ArrayList<String> dataList = new ArrayList<>();
-                        for (int cellNum = 0; cellNum < 5; cellNum++) {
+                        for (int cellNum = 1; cellNum < 5; cellNum++) {
                             Cell c = s.getCell(cellNum, rowNum);        // jxl.Cell
                             dataList.add(c.getContents());
                         }

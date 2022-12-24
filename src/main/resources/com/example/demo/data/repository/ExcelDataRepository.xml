@@ -7,8 +7,8 @@
 
     <insert id="uploadData">
         INSERT INTO excel_data
-        (no, place, phoneNumber, roadAddr, jibyeonAddr)
+        (place, phoneNumber, roadAddr, jibyeonAddr)
         VALUES
-            (#{no}, #{place}, #{phoneNumber}, #{roadAddr}, #{jibyeonAddr})
+            (#{place}, #{phoneNumber}, #{roadAddr}, #{jibyeonAddr})
     </insert>
 </mapper>

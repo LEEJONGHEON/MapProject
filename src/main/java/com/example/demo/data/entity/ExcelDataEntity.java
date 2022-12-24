@@ -17,17 +17,15 @@ public class ExcelDataEntity {
     도로명주소 roadAddr
     지번주소 jibyeonAddr
      */
-    private int no;
     private String place;
     private String phoneNumber;
     private String roadAddr;
     private String jibyeonAddr;
 
     public ExcelDataEntity(ArrayList<String> list) {
-        this.no = Integer.parseInt(list.get(0));
-        this.place = list.get(1);
-        this.phoneNumber = list.get(2);
-        this.roadAddr = list.get(3);
-        this.jibyeonAddr = list.get(4);
+        this.place = list.get(0);
+        this.phoneNumber = list.get(1);
+        this.roadAddr = list.get(2);
+        this.jibyeonAddr = list.get(3);
     }
 }

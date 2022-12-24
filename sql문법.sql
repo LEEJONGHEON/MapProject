@@ -20,13 +20,12 @@ select * from xml_data;
 
 
 # excel 테이블 생성
-drop table excel_data;
 create table excel_data (
-	no int not null,
     place varchar(100) not null,
     phoneNumber varchar(100) not null,
     roadAddr varchar(100) not null,
     jibyeonAddr varchar(100) not null
 );
 
+drop table excel_data;
 select * from excel_data limit 10000;
