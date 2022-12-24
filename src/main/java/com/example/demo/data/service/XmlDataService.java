@@ -31,8 +31,16 @@ public class XmlDataService {
 
     public ArrayList<XmlDataEntity> searchData(String search, String type) {
         ArrayList<XmlDataEntity> xmlDataEntityArrayList = new ArrayList<XmlDataEntity>();
-        if (type.equals("Sido")) {
+        if (type.equals("sido")) {
             xmlDataEntityArrayList = xmlDataRepository.searchBySido(search);
+        } else if (type.equals("sikunku")) {
+            xmlDataEntityArrayList = xmlDataRepository.searchBySiKunKu(search);
+        } else if (type.equals("eubMyeonDong")) {
+            xmlDataEntityArrayList = xmlDataRepository.searchByEubMyeonDong(search);
+        } else if (type.equals("jangso")) {
+            // 장소로 검색
+            // 키워드 : 방파제, 갯바위, 해안가, 해수욕장, 선착장, 간출암
+            xmlDataEntityArrayList = xmlDataRepository.searchByJangSo(search);
         }
         System.out.println(xmlDataEntityArrayList);
         return xmlDataEntityArrayList;

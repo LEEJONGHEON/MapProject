@@ -8,5 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 public class ExcelRequestDTO {
 
-    String roadAddr;
+    String search;
+    String type;
 }

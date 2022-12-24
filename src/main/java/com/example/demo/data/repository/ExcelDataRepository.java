@@ -11,6 +11,9 @@ public interface ExcelDataRepository {
     //Excel 데이터 읽어서 DB에 저장
     boolean uploadData(ExcelDataEntity excelDataEntity);
 
-    //DB에서 데이터 검색해서 가져오기(count 개수로 가져올 개수정하기)
-    ArrayList<ExcelDataEntity> searchData(String search);
+    // 도로명 주소 기반으로 데이터 가져오기
+    ArrayList<ExcelDataEntity> searchByRoad(String search);
+
+    // 지번 주소 기반으로 데이터 가져오기
+    ArrayList<ExcelDataEntity> searchByJibyeon(String search);
 }

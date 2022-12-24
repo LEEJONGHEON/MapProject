@@ -34,13 +34,13 @@ public class ExcelDataController {
         }
     }
 
-    @PostMapping("/road/search")
+    @PostMapping("/search")
     public ResponseEntity<?> searchData(@RequestBody ExcelRequestDTO dto) {
-        // 도로명주소로 검색하기
-        // 검색어 search값 Post로 전달
-        String search = dto.getRoadAddr();
-        ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.searchData(search);
-        System.out.println(excelDataEntityArrayList);
+        // 검색어
+        String search = dto.getSearch();
+        // 도로명 검색 or 지번 검색 front에서 전송
+        String type = dto.getType();
+        ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.searchData(search, type);
         if (excelDataEntityArrayList.isEmpty()) {
             // 일치하는 데이터가 없을경우
             return ResponseEntity.notFound().build();

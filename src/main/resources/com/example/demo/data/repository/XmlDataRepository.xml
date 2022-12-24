@@ -18,4 +18,20 @@
         SELECT * FROM xml_data
         WHERE siDo LIKE CONCAT('%',#{search},'%')
     </select>
+
+    <select id="searchBySiKunKu" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE siKunKu LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchByEubMyeonDong" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE eubMyeonDong LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchByJangSo" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE jangSo LIKE CONCAT('%',#{search},'%')
+    </select>
+
 </mapper>
