@@ -15,6 +15,7 @@ import Board from './component/Board';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Search from './component/Search';
+import Aedsearch from './component/Aedsearch';
 
 const {kakao} = window;
 const  clusterPositionsData = {
@@ -579,6 +580,7 @@ function App() {
                     <Route path="/MapPicture" element={<MapPicture />} />
                     <Route path="/Board" element={<Board />} />
                     <Route path="/Search" element={<Search />} />
+                    <Route path="/Aedsearch" element={<Aedsearch />} />
                 </Routes>
             </BrowserRouter>
         <Footer />
