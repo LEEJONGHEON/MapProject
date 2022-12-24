@@ -28,6 +28,7 @@ const Navigation = () => {
 
             <Nav.Link href="MapPicture">지도</Nav.Link>
             <Nav.Link href="Board">공익신고</Nav.Link>
+            <Nav.Link href="Search">구역검색</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         

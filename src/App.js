@@ -1,20 +1,20 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import {Map, MapMarker, MarkerClusterer} from "react-kakao-maps-sdk";
-import GetLocation from './Component/GetLocation';
-import Navigation from './Component/Navigation';
+import GetLocation from './component/GetLocation';
+import Navigation from './component/Navigation';
 import 'bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Aed from './Component/Aed';
-import Hospital from './Component/Hospital';
-import Emergency from './Component/Emergency';
-import Rescue from './Component/Rescue';
-import MapPicture from './Component/MapPicture';
-import MainPage from './Component/MainPage';
-import Board from './Component/Board';
-import Header from './Component/Header';
-import Footer from './Component/Footer';
-
+import Aed from './component/Aed';
+import Hospital from './component/Hospital';
+import Emergency from './component/Emergency';
+import Rescue from './component/Rescue';
+import MapPicture from './component/MapPicture';
+import MainPage from './component/MainPage';
+import Board from './component/Board';
+import Header from './component/Header';
+import Footer from './component/Footer';
+import Search from './component/Search';
 
 const {kakao} = window;
 const  clusterPositionsData = {
@@ -568,7 +568,6 @@ function App() {
     return (
         <div>
             <Header />
-       
             <Navigation/>
             <BrowserRouter>
                 <Routes>
@@ -579,10 +578,9 @@ function App() {
                     <Route path="/Rescue" element={<Rescue />} />
                     <Route path="/MapPicture" element={<MapPicture />} />
                     <Route path="/Board" element={<Board />} />
+                    <Route path="/Search" element={<Search />} />
                 </Routes>
             </BrowserRouter>
-       
-
         <Footer />
         </div>
     );

@@ -1,6 +1,13 @@
-export const APIKEY = 'fe633759a7fe6b9929127b001f60d5fb';
-export const kakaoAPI = () => (
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe633759a7fe6b9929127b001f60d5fb&libraries=services,clusterer,drawing">
 
-    </script>
-);
+// 브라우저가 현재의 클라이언트 호스트 이름을 얻어오는 방법
+const hostname 
+    = window && window.location && window.location.hostname;
+
+console.log('현재호스트: ', hostname);
+
+let backendHost; // 백엔드 호스트 이름
+if (hostname === 'localhost') {
+    backendHost = 'http://localhost:8080';
+}
+
+export const API_BASE_URL = `${backendHost}`;
