@@ -64,7 +64,11 @@ public class XmlDataController {
         // type에 따라 service에서 서로 다른 로직으로 검색진행
         String search = dto.getSearch();
         String type = dto.getType();
+
         ArrayList<XmlDataEntity> xmlDataEntityArrayList =xmlDataService.searchData(search,type);
+        if (xmlDataEntityArrayList.size() == 0) {
+            System.out.println("1224");
+        }
         if (xmlDataEntityArrayList.isEmpty()) {
             return ResponseEntity.notFound().build();
         } else {

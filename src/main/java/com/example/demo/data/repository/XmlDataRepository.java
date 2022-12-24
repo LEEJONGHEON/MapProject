@@ -20,6 +20,9 @@ public interface XmlDataRepository {
     // 읍면동 기반 검색
     ArrayList<XmlDataEntity> searchByEubMyeonDong(String search);
 
+    // 구역 기반 검색
+    ArrayList<XmlDataEntity> searchBykuYeokKuBun(String search);
+
     // 장소 기반 검색
     ArrayList<XmlDataEntity> searchByJangSo(String search);
 

@@ -26,7 +26,12 @@
 
     <select id="searchByEubMyeonDong" resultType="com.example.demo.data.entity.XmlDataEntity">
         SELECT * FROM xml_data
-        WHERE eubMyeonDong LIKE CONCAT('%',#{search},'%')
+        WHERE kuYeokKuBun LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchBykuYeokKuBun"  resultType="com.example.demo.data.entity.ExcelDataEntity">
+        SELECT * FROM xml_data
+        WHERE roadAddr LIKE CONCAT('%',#{search},'%')
     </select>
 
     <select id="searchByJangSo" resultType="com.example.demo.data.entity.XmlDataEntity">

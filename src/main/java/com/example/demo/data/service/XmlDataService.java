@@ -31,13 +31,15 @@ public class XmlDataService {
 
     public ArrayList<XmlDataEntity> searchData(String search, String type) {
         ArrayList<XmlDataEntity> xmlDataEntityArrayList = new ArrayList<XmlDataEntity>();
-        if (type.equals("sido")) {
+        if (type.equals("시도")) {
             xmlDataEntityArrayList = xmlDataRepository.searchBySido(search);
-        } else if (type.equals("sikunku")) {
+        } else if (type.equals("시군구")) {
             xmlDataEntityArrayList = xmlDataRepository.searchBySiKunKu(search);
-        } else if (type.equals("eubMyeonDong")) {
+        } else if (type.equals("읍면동")) {
             xmlDataEntityArrayList = xmlDataRepository.searchByEubMyeonDong(search);
-        } else if (type.equals("jangso")) {
+        } else if (type.equals("구역")) {
+            xmlDataEntityArrayList = xmlDataRepository.searchByEubMyeonDong(search);
+        } else if (type.equals("장소")) {
             // 장소로 검색
             // 키워드 : 방파제, 갯바위, 해안가, 해수욕장, 선착장, 간출암
             xmlDataEntityArrayList = xmlDataRepository.searchByJangSo(search);
