@@ -23,7 +23,8 @@ public class ExcelDataController {
 
     @GetMapping("/db")
     public ResponseEntity<?> excelToDB() {
-        // local Excel 데이터 db에 업로드
+        // local Excel파일 데이터 db에 업로드
+        // 보안설정 필요
         ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.readData();
         if(excelDataEntityArrayList.size() > 0) {
             // 업로드 성공시 성공여부 반환 true
