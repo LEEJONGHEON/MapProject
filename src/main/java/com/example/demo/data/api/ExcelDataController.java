@@ -34,7 +34,7 @@ public class ExcelDataController {
         }
     }
 
-    @PostMapping("/search")
+    @PostMapping("/road/search")
     public ResponseEntity<?> searchData(@RequestBody ExcelRequestDTO dto) {
         // 도로명주소로 검색하기
         // 검색어 search값 Post로 전달

@@ -13,4 +13,9 @@
             (#{id}, #{siDo}, #{siKunKu}, #{eubMyeonDong}, #{dongRi}
         , #{kyeongDo}, #{wiDo}, #{kuYeokKuBun}, #{jangSo})
     </insert>
+
+    <select id="searchBySido" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE siDo LIKE CONCAT('%',#{search},'%')
+    </select>
 </mapper>

@@ -1,11 +1,16 @@
-show databases;
-use demodb;
-show tables;
+# RDS 설정값 확인
+show variables like 'c%';
+select @@time_zone, now();
 
+# database 설정
+show databases;
+create database project;
+use project;
+show tables;
 
 # xml 테이블 생성
 create table xml_data(
-   id int not null,
+    id int not null,
     siDo varchar(100) not null,
     siKunKu varchar(100) not null,
     eubMyeonDong varchar(100) not null,
@@ -15,7 +20,6 @@ create table xml_data(
     kuYeokKuBun varchar(100) not null,
     jangSo varchar(100) not null
 );
-drop table xml_data;
 select * from xml_data;
 
 
@@ -27,5 +31,4 @@ create table excel_data (
     jibyeonAddr varchar(100) not null
 );
 
-drop table excel_data;
-select * from excel_data limit 10000;
+select * from excel_data;

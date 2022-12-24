@@ -29,4 +29,13 @@ public class XmlDataService {
         return new XmlDataEntity(dataList);
     }
 
+    public ArrayList<XmlDataEntity> searchData(String search, String type) {
+        ArrayList<XmlDataEntity> xmlDataEntityArrayList = new ArrayList<XmlDataEntity>();
+        if (type.equals("Sido")) {
+            xmlDataEntityArrayList = xmlDataRepository.searchBySido(search);
+        }
+        System.out.println(xmlDataEntityArrayList);
+        return xmlDataEntityArrayList;
+    }
+
 }

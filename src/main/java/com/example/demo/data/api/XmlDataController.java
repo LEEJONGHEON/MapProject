@@ -1,19 +1,19 @@
 package com.example.demo.data.api;
 
+import com.example.demo.data.dto.XmlRequestDTO;
 import com.example.demo.data.entity.XmlDataEntity;
 import com.example.demo.data.service.XmlDataService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.w3c.dom.*;
 
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -56,6 +56,19 @@ public class XmlDataController {
             Node node = nodeList.item(index);
             Element element = (Element) node;
             XmlDataEntity xmlDataEntity = xmlDataService.parseAllData(element);
+        }
+    }
+
+    @PostMapping("/search")
+    public ResponseEntity<?> searchData(@RequestBody XmlRequestDTO dto) {
+        // type에 따라 service에서 서로 다른 로직으로 검색진행
+        String search = dto.getSearch();
+        String type = dto.getType();
+        ArrayList<XmlDataEntity> xmlDataEntityArrayList =xmlDataService.searchData(search,type);
+        if (xmlDataEntityArrayList.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok().body(xmlDataEntityArrayList);
         }
     }
 
