@@ -7,15 +7,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 // import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Carousel from 'react-bootstrap/Carousel';
+
 
 const MainPage = () => {
 
   
     return (
     <>
-    
-
         <div className="d-flex">
         <Form className="d-flex">
         <Form.Control
@@ -28,8 +26,7 @@ const MainPage = () => {
      </Form>
      </div>
 
-     
-      <div className="container">
+      <div class="container">
         <div className="containerImage">
         <div className="p-4 p-md-5 mb-4 rounded text-bg-dark">
           <div className="col-md-6 px-0">
@@ -291,7 +288,7 @@ const MainPage = () => {
                 </div>
             </section>
 
-     </>
+        </>
         
     );
 }

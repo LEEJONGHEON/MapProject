@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_BASE_URL } from "../config/api-config";
+import { API_BASE_URL } from "../../config/api-config";
 import ResultTable from "./ResultTable";
 const Search = () => {
     const [input, setInput] = useState('');
