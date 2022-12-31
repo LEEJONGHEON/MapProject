@@ -277,3 +277,17 @@ margin-right: 30px;
     flex-wrap: wrap;
 
  }
+
+ .Board {
+display: block;
+ }
+
+ .main-imgs {
+display: inline-block;
+flex-direction: row;
+align-content: center;
+ }
+
+.row mb-3 {
+  height: 700px;
+}

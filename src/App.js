@@ -12,6 +12,9 @@ import Rescue from './component/Rescue';
 import MapPicture from './component/MapPicture';
 import MainPage from './component/MainPage';
 import Board from './component/Board';
+import BoardList from './component/BoardList';
+import BoardPage from './component/BoardPage';
+import BoardWrite from './component/BoardWrite';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Search from './component/Search';
@@ -579,6 +582,9 @@ function App() {
                     <Route path="/Rescue" element={<Rescue />} />
                     <Route path="/MapPicture" element={<MapPicture />} />
                     <Route path="/Board" element={<Board />} />
+                    <Route path="/BoardWrite" element={<BoardWrite />} />
+                    <Route path="/BoardList" element={<BoardList />} />
+                    <Route path="/BoardPage" element={<BoardPage />} />
                     <Route path="/Search" element={<Search />} />
                     <Route path="/Aedsearch" element={<Aedsearch />} />
                 </Routes>
