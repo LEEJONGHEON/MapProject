@@ -23,41 +23,6 @@ const MainPage = () => {
      </Form>
      </div>
 
-        {/* <div>
-            <ul className="main-icon-ul">
-                <li className="main-icon">
-                  <a href="Emergency">
-                    <img src="./beta.png" alt="응급실 새창 열기" />
-                    <span>응급실</span></a>
-                </li>
-                <li className="main-icon">
-                  <a href="Hospital">
-                    <img src="../beta.png" alt="병원 새창 열기" />
-                    <span>병원</span></a>
-                </li>
-                <li className="main-icon">
-                  <a href="Aed">
-                    <img src="./beta.png" alt="자동제세동기(AED) 새창 열기" />
-                    <span>자동제세동기(AED)</span></a>
-                </li>
-               <li className="main-icon">
-                  <a href="Rescue">
-                    <img src="./beta.png" alt="응급처치방법 새창 열기" />
-                    <span>응급처치방법</span></a>
-                </li>
-                <li className="main-icon">
-                  <a href="MapPicture">
-                    <img src="./beta.png" alt="지도 새창 열기" />
-                    <span>지도</span></a>
-                </li>
-                <li className="main-icon">
-                  <a href="Board">
-                    <img src="./beta.png" alt="공익신고 새창 열기" />
-                    <span>공익신고</span></a>
-                </li>
-            </ul>
-      </div> */}
-
       <div>
       <div class="container">
         <div className="containerImage">

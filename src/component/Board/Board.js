@@ -1,7 +1,7 @@
 // 게시판 추가
 
 import React, { useEffect, useState } from "react";
-import { API_BASE_URL } from "../config/api-config";
+import { API_BASE_URL } from "../../config/api-config";
 
 const Board = () => {
 
