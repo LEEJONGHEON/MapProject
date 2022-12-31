@@ -41,7 +41,8 @@ public class ExcelDataController {
         String search = dto.getSearch();
         // 도로명 검색 or 지번 검색 front에서 전송
         String type = dto.getType();
-        ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.searchData(search, type);
+        int count = dto.getCount();
+        ArrayList<ExcelDataEntity> excelDataEntityArrayList = excelDataService.searchData(search, type, count);
         if (excelDataEntityArrayList.isEmpty()) {
             // 일치하는 데이터가 없을경우
             return ResponseEntity.notFound().build();

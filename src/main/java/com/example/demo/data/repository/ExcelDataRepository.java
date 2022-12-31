@@ -12,8 +12,8 @@ public interface ExcelDataRepository {
     boolean uploadData(ExcelDataEntity excelDataEntity);
 
     // 도로명 주소 기반으로 데이터 가져오기
-    ArrayList<ExcelDataEntity> searchByRoad(String search);
+    ArrayList<ExcelDataEntity> searchByRoad(String search, int count);
 
     // 지번 주소 기반으로 데이터 가져오기
-    ArrayList<ExcelDataEntity> searchByJibyeon(String search);
+    ArrayList<ExcelDataEntity> searchByJibyeon(String search, int count);
 }

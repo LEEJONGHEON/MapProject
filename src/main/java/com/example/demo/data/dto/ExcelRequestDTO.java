@@ -10,4 +10,6 @@ public class ExcelRequestDTO {
 
     String search;
     String type;
+
+    int count;
 }

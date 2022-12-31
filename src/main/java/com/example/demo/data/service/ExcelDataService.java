@@ -51,14 +51,14 @@ public class ExcelDataService {
         return excelDataEntityArrayList;
     }
 
-    public ArrayList<ExcelDataEntity> searchData(String search, String type) {
+    public ArrayList<ExcelDataEntity> searchData(String search, String type, int count) {
         ArrayList<ExcelDataEntity> data = null;
         if (type.equals("roadAddr")) {
             // 도로명 검색
-            data = excelDataRepository.searchByRoad(search);
+            data = excelDataRepository.searchByRoad(search, count);
         } else if (type.equals("jibyeonAddr")) {
             // 지번 검색
-            data = excelDataRepository.searchByJibyeon(search);
+            data = excelDataRepository.searchByJibyeon(search, count);
         }
         System.out.println(data);
         return data;

@@ -14,11 +14,11 @@
 
     <select id="searchByRoad"  resultType="com.example.demo.data.entity.ExcelDataEntity">
         SELECT * FROM excel_data
-        WHERE roadAddr LIKE CONCAT('%',#{search},'%')
+        WHERE roadAddr LIKE CONCAT('%',#{search},'%') limit #{count}
     </select>
 
     <select id="searchByJibyeon"  resultType="com.example.demo.data.entity.ExcelDataEntity">
         SELECT * FROM excel_data
-        WHERE jibyeonAddr LIKE CONCAT('%',#{search},'%')
+        WHERE jibyeonAddr LIKE CONCAT('%',#{search},'%') limit #{count}
     </select>
 </mapper>
