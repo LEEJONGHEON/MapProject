@@ -9,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-// 역할: 컨트롤러와 저장소 사이의 잡일 처리 역할
 @Service
 @Slf4j
 @RequiredArgsConstructor

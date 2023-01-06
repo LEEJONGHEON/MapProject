@@ -18,14 +18,14 @@ public class BoardController {
 
     private final BoardService service;
 
-    // 할 일 목록 전체조회 요청
+    // 목록 전체조회 요청
     @GetMapping("/list")
     public ResponseEntity<?> boards() {
         log.info("/board GET request!");
         return ResponseEntity.ok().body(service.findAllServ());
     }
 
-    // 할 일 목록 등록 요청
+    // 등록 요청
     // title, contents, writer, passwd
     @PostMapping("/write")
     public ResponseEntity<?> create(@RequestBody Board newBoard) {
@@ -47,8 +47,7 @@ public class BoardController {
 
     }
 
-    // 할 일 개별 조회 요청
-    // URI : /api/todos/3 : GET  => 3번 할 일만 조회해서 클라이언트에게 리턴
+    // 개별 조회 요청
     @GetMapping("/{id}")
     public ResponseEntity<?> findOne(@PathVariable String id) {
         log.info("board/{} GET request!", id);
@@ -63,9 +62,8 @@ public class BoardController {
     }
 
 
-    // 할 일 삭제 요청
+    // 삭제 요청
     // URI : /board/id값 : DELETE
-    // => 3번 할 일을 삭제 후 삭제된 이후 갱신된 할일 목록 리턴
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable String id) {
 
@@ -80,7 +78,7 @@ public class BoardController {
 
     }
 
-    // 할일 수정 요청
+    // 수정 요청
     @PutMapping
     public ResponseEntity<?> update(@RequestBody Board toDo) {
 

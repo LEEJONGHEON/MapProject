@@ -9,9 +9,8 @@ import java.util.Date;
 import java.util.UUID;
 
 @Setter @Getter @ToString
-// @NoArgsConstructor // 기본 생성자
-@AllArgsConstructor // 전체 필드 초기화 생성자
-// 역할: 하나의 할 일 데이터의 집합 객체
+@AllArgsConstructor
+
 public class Board {
 
     private String id;                  // PK
