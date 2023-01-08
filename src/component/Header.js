@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
 <div class="maincontainer">
-  <header class="blog-header lh-1 py-3">
+  <header class="blog-header ">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
         <a class="link-secondary" href="Mainpage">로고?</a>

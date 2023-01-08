@@ -79,7 +79,7 @@ body #map {
 
 /* 홈화면, 이미지는 변경가능, 이미지 액박시 grey */
 .item-bg{
-  width: 100%;
+
   height: 700px;
   /* background: #888;  */
   /* url(../img/main2.png) no-repeat center/cover; */
@@ -98,7 +98,7 @@ body #map {
 }
 
 
-.maincontainer, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
@@ -109,6 +109,7 @@ body #map {
 }
 
 .maincontainer {
+  margin: 0 0;
   justify-content: space-evenly;
 }
 
@@ -134,10 +135,13 @@ display: inline-block;
 /* display: flex; */
 justify-content: center;
 align-items: center;
-
-
-
 }
+
+.blog-pagination {
+  display: flex;
+  justify-content: center;
+}
+
 
 .d-flex .me-2 {
   width: 500px;
@@ -291,3 +295,178 @@ align-content: center;
 .row mb-3 {
   height: 700px;
 }
+
+.body_imgs img{
+  /* display: flex; */
+  flex-wrap: wrap;
+  width: 200px;
+  height: 100px;
+}
+
+.clogo {
+  margin-bottom: 60px;
+}
+
+/* 
+////////////////////////////////
+*/
+
+
+.thumbnail-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* overflow: hidden;     */
+  /* overflow hidden : 사각형을 동그라미로 가린거임 */
+  /* margin: 30px auto 10px; */
+  cursor: pointer;
+}
+
+/* 이미지 깨지더라도 사이즈 맞춰서 진행 */
+ .thumbnail-box img {
+  width: 100px;
+  height: 100px;
+}
+
+.signup-img-label {
+  font-weight: bold;
+  font-size: 17px;
+  color: #0095f6;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.boardWrite_bg_img {
+  /* height: 700px; */
+  background: #888; 
+  /* position: fixed; */
+  z-index: 1000;
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+
+  
+  font-weight: 700;
+
+  /*박스겹치기, Z축 방향으로 앞으로 보내기*/
+  /* position: fixed; */
+}
+ 
+
+/* ====================
+rescue css
+*/
+.main_study_area{
+  overflow: hidden;
+}
+
+
+
+/*==================================================================
+            service section Style
+====================================================================*/
+.main_service .head_title{
+  padding: 100px 0px 40px 0px;
+  margin-bottom: 0px;
+}
+.main_service .head_title h2{
+  margin-right: 12%;
+  border-right: 6px solid #e74c3c;
+  color:#fff;
+  padding-right: 5%;
+}
+.main_service .single_service_img {
+  position: relative;
+  height: 676px;
+}
+.main_service .single_service_img img {
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 100%;
+  height: 90%;
+  background-color: #202020;
+}
+
+.main_service .single_service.single_service_text {
+  margin-right:0px;
+  background: #202020;
+}
+.main_service .single_service.single_service_text .single_service_icon i{
+  background: #f4f5f9;
+  width:70px;
+  height:70px;
+  line-height: 70px;
+  text-align: center;
+  color:#e74c3c;
+  position: relative;
+  z-index: 9;
+  border:5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  font-size: 1.875rem;
+}
+
+.main_service .single_service.single_service_text .single_service_right_text {
+  width: 96%;
+}
+.main_service .single_service.single_service_text .single_service_right_text h4{
+  color:#e74c3c;
+}
+.main_service .single_service.single_service_text .single_service_right_text p{
+  color:#999999;
+  font-family: 'source_sans_proregular';
+}
+.main_service {
+  display: flex;
+  background: #202020;
+  margin-bottom: 100px;
+  width: 96%;
+}
+/* 이미지 사이즈 고정하기 */
+
+
+/*========================================================================
+                    Study Section Css
+==========================================================================*/
+#Study {
+  display: block;
+
+}
+
+.study{
+  background: #f4f5f9;
+}
+.main_study_area{
+  overflow: hidden;
+}
+.slick-active{
+  outline: none;
+}
+.single_study_text{
+  background: #fff;
+  /* position: absolute; */
+  right:-15%;
+  top:85px;
+  width:100%;
+  z-index: 9;
+  padding: 10% 20%;
+}
+.single_study_text .s_study_icon{
+  background: #e74c3c;
+  width:60px;
+  height: 60px;
+  line-height: 60px;
+  color:#fff;
+  transform: rotate(45deg);
+  margin: 30px auto;
+}
+.single_study_text .s_study_icon i{
+  transform: rotate(-45deg);
+}
+.single_study_right_img{
+  position: relative;
+}
+
+

@@ -1,22 +1,11 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import SwipeableViews from 'react-swipeable-views';
-// import { useTheme } from '@mui/material/styles';
-// import AppBar from '@mui/material/AppBar';
-// import Tabs from '@mui/material/Tabs';
-// import Tab from '@mui/material/Tab';
-// import Typography from '@mui/material/Typography';
-// import Zoom from '@mui/material/Zoom';
-// import Fab from '@mui/material/Fab';
-// import AddIcon from '@mui/icons-material/Add';
-// import EditIcon from '@mui/icons-material/Edit';
-// import UpIcon from '@mui/icons-material/KeyboardArrowUp';
-// import { green } from '@mui/material/colors';
-// import Box from '@mui/material/Box';
+import Carousel from 'react-bootstrap/Carousel';
+
 
 const Rescue = () => {
     // <!-- Study Section --> 
     return (
+        <>
    <section id="study" class="study text-center wow fadeIn"  data-wow-duration="2s" data-wow-dealy="1.5s">
         <div class="container">
             <div class="row">
@@ -28,6 +17,9 @@ const Rescue = () => {
                         </div>
                         <div class="separator"></div>
                     </div>
+
+
+                        {/* 슬라이드로 진행 */}
                     <div class="single_study_content">
                         <div class="col-sm-6">
                             <div class="single_study_slid_area">
@@ -38,38 +30,65 @@ const Rescue = () => {
                                             <div class="s_study_icon">
                                                 <i class="fa fa-lightbulb-o"></i>  
                                             </div>
-                                            <h4>aCCUMULATE CREATIVE IDEAS</h4>
+                                            <h4>1. 전원 켜기</h4>
                                             <div class="separator3"></div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
+                                            <p>자동 심장충격기의 전원을 켠다. 전원이 들어오면 음성이 나오면서 절차를 안내해준다.</p>
 
-                                            <a href="" class="btn btn-lg">view video</a>
+                                            <a href="https://youtu.be/ViZtrjdwY9I" class="btn btn-lg">view video</a>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="s_study_icon">
+                                                <i class="fa fa-lightbulb-o"></i>  
+                                            </div>
+                                            <h4>2. 패드 부착</h4>
+                                            <div class="separator3"></div>
+                                            <p>상체를 노출시킨 후 우측 쇄골 아래쪽에 패드를 부착한다.<br/>
+                                            또 다른 패드는 좌측 유두 바깥쪽 아래의 겨드랑이 중앙선에 부착한다.<br/>
+                                            *각 패드의 표면에는 부착할 위치가 어디인지 그림으로 표시되어 있으므로 참고한다.
+                                            </p>
+
+                                            <a href="https://youtu.be/ViZtrjdwY9I" class="btn btn-lg">view video</a>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="s_study_icon">
+                                                <i class="fa fa-lightbulb-o"></i>  
+                                            </div>
+                                            <h4>3. 심장리듬 분석</h4>
+                                            <div class="separator3"></div>
+                                            <p>패드에 연결된 선을 기계에 꽂는다.<br/>
+                                            기계에서 자동으로 심장리듬 분석 중이라는 말이 나온다.<br/>
+                                            심장 분석에 오류가 나지 않도록 환자에게 닿지 않도록 떨어진다.
+                                            </p>
+
+                                            <a href="https://youtu.be/ViZtrjdwY9I" class="btn btn-lg">view video</a>
                                         </div>
                                         <div class="item">
                                             <div class="s_study_icon">
                                                 <i class="fa fa-lightbulb-o"></i>  
                                             </div>
-                                            <h4>aCCUMULATE CREATIVE IDEAS</h4>
+                                            <h4>4. 전기 충격</h4>
                                             <div class="separator3"></div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
+                                            <p>제세동이 필요하다면 기계가 자동으로 충전을 하며, 충전 후 제세동 버튼을 누르라는 메시지가 나온다.<br/>
+                                            버튼을 누르기 전 주변 사람들에게 환자와 떨어지도록 다시 주의를 준다.<br/> 
+                                            제세동버튼을 누르면 환자에게 제세동을 위한 전기충격이 가해지게 된다.                                     
+                                            </p>
 
-                                            <a href="" class="btn btn-lg">view video</a>
+                                            <a href="https://youtu.be/ViZtrjdwY9I" class="btn btn-lg">view video</a>
                                         </div>
                                         <div class="item">
                                             <div class="s_study_icon">
                                                 <i class="fa fa-lightbulb-o"></i>  
                                             </div>
-                                            <h4>aCCUMULATE CREATIVE IDEAS</h4>
+                                            <h4>5. 무한 반복</h4>
                                             <div class="separator3"></div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
+                                            <p>전기충격이 필요없거나, 전기 충격이 주어지고 나서는 즉시 심폐소생술을 시행한다.</p>
+                                            <p>기계는 2분마다 심장리듬을 분석한다. 심폐소생술 도중에 기계에서 음성 지시기 나오면 기계의 지시에 따라서 위의 절차를 반복하도록 한다.</p>
 
-                                            <a href="영상팝업" class="btn btn-lg">view video</a>
+                                            <a href="https://youtu.be/ViZtrjdwY9I" class="btn btn-lg">view video</a>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -84,10 +103,14 @@ const Rescue = () => {
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
+    </>
     );
          // function TabPanel(props) {
     //     const { children, value, index, ...other } = props;

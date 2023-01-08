@@ -4,11 +4,12 @@ const Footer = () => {
 
     return(
 <>
+    <br/><br/><br/><br/>
      <div class="blog-footer">
         <p>공익신고 접수는 <a href="Board">여기</a>
         를 클릭해주세요
         </p>
-     </div>
+     </div><br/><br/>
 
       <div className="container">
         <div className="row">
