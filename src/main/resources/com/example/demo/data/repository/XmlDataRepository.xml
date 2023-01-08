@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.data.repository.XmlDataRepository">
+
+    <insert id="uploadData">
+        INSERT INTO xml_data
+            (id, siDo, siKunKu, eubMyeonDong, dongRi,
+        kyeongDo, wiDo, kuYeokKuBun, jangSo)
+        VALUES
+            (#{id}, #{siDo}, #{siKunKu}, #{eubMyeonDong}, #{dongRi}
+        , #{kyeongDo}, #{wiDo}, #{kuYeokKuBun}, #{jangSo})
+    </insert>
+
+    <select id="searchBySido" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE siDo LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchBySiKunKu" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE siKunKu LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchByEubMyeonDong" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE kuYeokKuBun LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchBykuYeokKuBun"  resultType="com.example.demo.data.entity.ExcelDataEntity">
+        SELECT * FROM xml_data
+        WHERE roadAddr LIKE CONCAT('%',#{search},'%')
+    </select>
+
+    <select id="searchByJangSo" resultType="com.example.demo.data.entity.XmlDataEntity">
+        SELECT * FROM xml_data
+        WHERE jangSo LIKE CONCAT('%',#{search},'%')
+    </select>
+
+</mapper>
