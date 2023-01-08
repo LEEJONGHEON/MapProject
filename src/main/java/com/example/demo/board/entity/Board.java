@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Setter @Getter @ToString
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 public class Board {
 
+    private int count;           // 게시글 목록의 개수
     private String id;                  // PK
     private String title;               // 제목
     private String contents;             // 내용

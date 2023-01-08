@@ -40,12 +40,7 @@ class BoardRepositoryTest {
     @Test
     @DisplayName("저장소에서 목록을 조회했을 때 할 일의 개수가 3개여야 한다.")
     void findAllTest() {
-        // given : 테스트 시 필요한 데이터
-
-        // when : 테스트의 실제 상황
         List<Board> boardList = repository.findAll();
-
-        // then : 테스트 결과 단언
         assertEquals(3, boardList.size());
         assertNotNull(boardList);
     }

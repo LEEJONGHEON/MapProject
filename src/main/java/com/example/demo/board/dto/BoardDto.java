@@ -1,6 +1,7 @@
 package com.example.demo.board.dto;
 
 import com.example.demo.board.entity.Board;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import java.util.Date;
@@ -16,6 +17,8 @@ public class BoardDto {
     private String writer;              // 작성자
     private String passwd;              // 패스워드
     private boolean deleteYn;           // 삭제 여부
+
+    @JsonFormat(pattern = "yyyy-MM-dd a hh:mm")
     private Date createdDate;           // 생성일시
     private Date modifiedDate;          // 최종 수정일시
 

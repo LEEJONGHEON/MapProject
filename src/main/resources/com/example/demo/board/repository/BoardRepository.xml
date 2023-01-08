@@ -7,9 +7,9 @@
 
     <insert id="save">
         INSERT INTO tbl_board
-             (id, title, contents, writer, passwd, deleteYn, createdDate, modifiedDate)
+             (count, id, title, contents, writer, passwd, deleteYn, createdDate, modifiedDate)
         VALUES
-              (#{id}, #{title}, #{contents}, #{writer}, #{passwd}, #{deleteYn}, NOW(), NULL)
+              (#{count}, #{id}, #{title}, #{contents}, #{writer}, #{passwd}, #{deleteYn}, NOW(), NULL)
     </insert>
 
     <delete id="remove">
@@ -18,13 +18,13 @@
     </delete>
 
     <select id="findAll" resultType="com.example.demo.board.entity.Board">
-        SELECT id, title, contents, writer, passwd, deleteYn, createdDate, modifiedDate
+        SELECT count, id, title, contents, writer, passwd, deleteYn, createdDate, modifiedDate
         FROM tbl_board
         ORDER BY createdDate
     </select>
 
     <select id="findOne" resultType="com.example.demo.board.entity.Board">
-        SELECT id, title, contents, writer, passwd, deleteYn, createdDate, modifiedDate
+        SELECT count, id, title, contents, writer, passwd, deleteYn, createdDate, modifiedDate
         FROM tbl_board
         WHERE id=#{id}
     </select>
